@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "myapp.fullname" . }}
-  labels:
-    app: {{ include "myapp.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -19,5 +17,3 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 8000
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
