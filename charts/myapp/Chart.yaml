@@ -1,6 +1,6 @@
 apiVersion: v2
 name: myapp
-description: A sample FastAPI Python app deployed with Helm
+description: A FastAPI Python app deployed with Helm
 type: application
 version: 0.1.0
 appVersion: "1.0.0"
