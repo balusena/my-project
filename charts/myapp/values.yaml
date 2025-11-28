@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: nexus.local:5000/myapp
+  repository: 192.168.181.128:5000/myapp
   tag: "1.0.0"
   pullPolicy: IfNotPresent
 
@@ -11,8 +11,3 @@ service:
 
 ingress:
   enabled: false
-  hosts:
-    - host: myapp.local
-      paths:
-        - path: /
-          pathType: Prefix
